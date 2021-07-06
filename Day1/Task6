@@ -1,0 +1,52 @@
+//
+//  main.c
+//  Programs
+//
+//  Created by Dzhan on 5.07.21.
+//
+
+#include <stdio.h>
+#include <math.h>
+#include <limits.h>
+//zadacha 6
+/*
+ 
+
+ */
+int main(){
+    float a,b,result;
+    char op;
+    printf("Enter operation: ");
+    scanf("%c",&op);
+    printf("a = ");
+    scanf ( "%f",&a);
+    printf("b = ");
+    scanf  ("%f", &b);
+    
+    
+    if(op == '+'){
+        result= a+b;
+    }
+    else if (op=='-'){
+        result=a=b;
+    }
+    else if (op =='*'){
+        result=a*b;
+    }
+    else if (op == '/')
+    {
+        if(b == 0)
+            {
+        printf("Divide by 0 eror!!");
+    }
+    else
+    {
+        result= a/b;
+    }
+}
+printf( "Result = %f",result);
+    return 0;
+    }
+        
+
+
