@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+//zadacha 11
+{
+ 
+    char* str1 = "42";
+    char* str2 = "3.14159";
+    char* str3 = "31337 geek";
+ 
+    int myint1 = atoi(str1);
+    int myint2 = atoi(str2);
+    int myint3 = atoi(str3);
+ /*
+  
+  atoi () приема като аргумент масив от символи или низов литерал и връща стойността му.
+  */
+    printf("String(%s) to Integer %d \n", str1, myint1);
+    printf("String(%s) to Integer %d \n", str2, myint2);
+    printf("String(%s) to Integer %d \n", str3, myint3);
+ 
+    return 0;
+}
