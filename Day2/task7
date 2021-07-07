@@ -9,14 +9,14 @@ void isUpper(char ch)
     if (ch >= 'A' && ch <= 'Z')
         printf("\n%c Е Главна буква \n ",ch);
     else
-        printf("\n %c Не е малка буква \n",ch);
+        printf("\n %c Не е  ГЛАВНА буква \n",ch);
 
 }
 int main()
 {
     char ch;
 
-    ch = 'R';
+    ch = 'd';
 
     isUpper(ch);
 
@@ -24,4 +24,3 @@ int main()
 
     return 0;
 }
-
