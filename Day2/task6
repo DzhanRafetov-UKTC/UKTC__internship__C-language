@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+//zadacha 6
+void isUpper(char ch)
+{
+
+    if (ch >= 'a' && ch <= 'z')
+        printf("\n%c е малка буква \n ",ch);
+    else
+        printf("\n %c не  е малка буква \n",ch);
+
+}
+int main()
+{
+    char ch;
+
+    ch = 'R';
+
+    isUpper(ch);
+
+   
+
+    return 0;
+}
+
