@@ -1,0 +1,14 @@
+#include <ctype.h>
+#include <stdio.h>
+//zadacha 9
+int isDigit(char* sym){
+    return (sym >= '0' && sym <= '9') ? 1 : 0;
+}
+int main()
+{
+    if(isDigit('5')){
+            printf("Its Digit");
+        }else{
+            printf("No,it isnt Digit");
+}
+}
