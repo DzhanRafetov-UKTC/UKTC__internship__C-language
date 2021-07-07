@@ -1,0 +1,44 @@
+//
+//  main.c
+//  Programs
+//
+//  Created by Dzhan on 5.07.21.
+//
+
+#include <stdio.h>
+#include <math.h>
+#include <limits.h>
+//zadacha 3
+/*
+ 
+
+ */
+
+int minNumber(int* arr ,int n ){
+    int min=*arr;
+    for (int i=0;i<n ; i++) {
+       
+        
+            if(*(arr+i)< min){
+                min=*(arr+i);
+            }
+        
+        
+        }
+    
+    
+    
+    
+    return min;
+}
+
+
+int main()
+    {
+    int a[5]= {1,2,3,4,5};
+    printf("Min=%d",minNumber(a, 5));
+    return 0;
+        
+}
+
+    
