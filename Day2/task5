@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//zadacha 5
+
+int sumArr(int* arr, int size, int start)
+{
+    if (start == size)
+    {
+        return 0;
+    }
+    return arr[start] + sumArr(arr, size, start + 1);
+}
+
+int main()
+{
+    int arr[] = {1,2,3,1,1};
+    printf("%d\n", sumArr(arr, 5, 0));
+    return 0;
+}
