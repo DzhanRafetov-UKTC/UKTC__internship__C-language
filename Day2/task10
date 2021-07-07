@@ -1,0 +1,21 @@
+#include <ctype.h>
+#include <stdio.h>
+//zadacha 10
+int isDigit(char* sym){
+    return (sym >= '0' && sym <= '9') ? 1 : 0;
+}
+int isNumber(char* number){
+    while(*number){
+        if(!isDigit(*number)){
+            return 0;
+        }
+      number++;
+    }
+    return 1;
+}
+int main()
+{
+    printf("%d", isNumber("55555555"));
+    return 0;
+}
+
