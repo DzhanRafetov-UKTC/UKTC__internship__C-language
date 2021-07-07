@@ -1,0 +1,27 @@
+#include <stdio.h>
+ 
+void UpOrLow(char ch)
+{
+ 
+    if (ch >= 'A' && ch <= 'Z')
+        printf("\n%c е ГЛАВНА БУКВА\n",ch);
+ 
+    else if (ch >= 'a' && ch <= 'z')
+        printf("\n%c Е МАЛКА БУКВА\n",ch);
+ 
+    else
+        printf("\n%c НЕ Е БУКВА!\n",ch);
+}
+ 
+int main()
+{
+    char ch;
+ 
+    ch = 'b';
+ 
+    UpOrLow(ch);
+ 
+ 
+ 
+    return 0;
+}
