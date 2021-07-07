@@ -1,1 +1,39 @@
+//
+//  main.c
+//  Programs
+//
+//  Created by Dzhan on 5.07.21.
+//
+
+#include <stdio.h>
+#include <math.h>
+#include <limits.h>
+//zadacha 1
+/*
+ 
+
+ */
+
+int swap(int* a ,int* b ){
+    int temp =*a;
+    *a=*b;
+    *b=temp;
+    return temp;
+}
+
+int main(){
+    int a,b;
+    printf("Enter a: ");
+    scanf("%d", &a);
+    printf("Enter b: ");
+    scanf("%d" ,&b);
+    printf("a==%d,b==%d\n",a,b);
+    swap(&a,&b);
+    printf("After swapping:\n");
+    printf("a=%d,b=%d\n",a,b);
+               return 0;
+        
+}
+        
+    
 
