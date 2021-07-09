@@ -1,0 +1,91 @@
+#include <stdio.h>
+#include <string.h>
+
+
+
+
+int countNano(const char* str)
+{
+    int cnt = 0;
+    int state = 0; // empty
+
+    while (*str)
+    {
+        if (state == 0)
+        {
+            if (*str == 'n')
+            {
+                state = 1; // n
+            }
+        }
+        else if (state == 1)
+        {
+            if (*str == 'a')
+            {
+                state = 2; // na
+            }
+            else if (*str == 'n')
+            {
+                // same state
+            }
+            else
+            {
+                state = 0; // empty
+            }
+        }
+        else if (state == 2)
+        {
+            if (*str == 'n')
+            {
+                state = 3; // nan
+            }
+            else
+            {
+                state = 0; // empty
+            }
+        }
+        else if (state == 3)
+        {
+            if (*str == 'o')
+            {
+                state = 4;
+                cnt++;
+            }
+            else if (*str == 'n')
+            {
+                state = 1; // n
+            }
+            else if (*str == 'a')
+            {
+                state = 2; // na
+            }
+            else
+            {
+                state = 0; // empty
+            }
+        }
+        else if (state == 4)
+        {
+            if (*str == 'n')
+            {
+                state = 1; // n
+            }
+            else
+            {
+                state = 0; // empty
+            }
+        }
+        str++;
+    }
+    return cnt;
+}
+
+
+int main()
+{
+    char str1[50];
+    printf("Enter first string: ");
+    gets(str1);
+    printf("Count nano: %d\n", countNano(str1));
+    return 0;
+}
