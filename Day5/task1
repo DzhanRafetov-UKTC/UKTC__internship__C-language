@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int strsize(const char* str)
+{
+    int cnt = 0;
+    while (*str)
+    {
+        cnt++;
+        str++;
+    }
+    return cnt;
+}
+
+
+int main()
+{
+    char str [50];
+    printf("Enter String: ");
+    gets(str);
+    printf("String size: %d \n",strsize(str));
+  
+    return 0;
+}
