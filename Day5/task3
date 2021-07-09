@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+
+void strcopy(char* destination, const char* source)
+{
+    char* p = destination;
+    while (*source)
+    {
+        *p = *source;
+        p++;
+        source++;
+    }
+    p = '\0';
+}
+
+
+int main()
+{
+    char str1[50];
+    char str2[50];
+
+    printf("Enter first string: ");
+    gets(str1);
+    strcopy(str2, str1);
+    printf("String 2 : %s ",str2);
+    return 0;
+}
